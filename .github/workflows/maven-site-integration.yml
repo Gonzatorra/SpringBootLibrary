@@ -78,7 +78,7 @@ jobs:
       - name: Run Integration Tests
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -Pintegration integration-test org.sonar-source.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gonzatorra
+        run: mvn -Pintegration integration-test org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gonzatorra
 
       - name: Run Performance Tests
         run: mvn -Pperformance integration-test
